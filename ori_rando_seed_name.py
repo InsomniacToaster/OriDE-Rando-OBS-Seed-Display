@@ -27,8 +27,13 @@ with open(randomizer_path, 'r', encoding='utf-8') as f:
     dat_headers = f.readline()
 
 # stripping newline from end of header line (if existing) and splits the data into a list
-dat_headers=dat_headers.strip().replace('|' , ',')
-dat_headers=dat_headers.split(",")
+headers = headers.split("|", 1)
+headers[-1] = headers[-1].strip()
+headers0 = headers[0].split(",")
+headers1 = headers[1]
+headers = headers0
+headers.append(headers1)
+
 
 if display_logic_mode:
     for item in dat_headers:
