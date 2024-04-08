@@ -138,55 +138,51 @@ def populate_headers(rpath, filename):
         if display_logic_mode:
             for item in headers:
                 if item in logic_modes:
-                    seed_display.append('LogicMode=' + item + '|')
+                    seed_display.append('LogicMode=' + item)
 
         if display_key_mode:
             for item in headers:
                 if item in key_modes:
-                    seed_display.append('KeyMode=' + item + '|')
+                    seed_display.append('KeyMode=' + item)
 
         if display_goal_mode:
             for item in headers:
                 if item in goal_modes:
-                    seed_display.append('GoalMode=' + item + '|')
+                    seed_display.append('GoalMode=' + item)
 
         if display_selected_variations:
             for item in headers:
                 if item in variations:
-                    seed_display.append('vars=' + item + '|')
+                    seed_display.append('vars=' + item)
 
         if display_item_pool:
             if bool(set(headers) & set(item_pool)):
                 for item in headers:
                     if item in item_pool:
-                        seed_display.append(item + '|')
+                        seed_display.append(item)
             else:
-                seed_display.append('pool=Normal' + '|')
+                seed_display.append('pool=Normal')
 
         if display_path_difficulty:
             if bool(set(headers) & set(path_difficulty)):
                 for item in headers:
                     if item in path_difficulty:
-                        seed_display.append('path difficulty =' + item + '|')
+                        seed_display.append('path difficulty =' + item)
             else:
-                seed_display.append('path difficulty=Normal' + '|')
+                seed_display.append('path difficulty=Normal')
                     
         if display_file_algorithm:
             if bool(set(headers) & set(file_algorithm)):
                 for item in headers:
                     if item in file_algorithm:
-                        seed_display.append('file_algorithm=' + item + '|')
+                        seed_display.append('file_algorithm=' + item)
             else:
-                seed_display.append('file_algorithm=Classic' + '|')
+                seed_display.append('file_algorithm=Classic')
 
         if display_seed_name:
-            seed_display.append('seed name =' + headers[-1])
+            seed_display.append('seed name=' + headers[-1])
 
-        temp_seed_display = ''
-        for item in seed_display:
-            temp_seed_display += item
-        seed_display = temp_seed_display
-
+        seed_display = '|'.join(seed_display)
         update_source_text()
     else:
         OBS.script_log(OBS.LOG_INFO, 'File does not exist!')
