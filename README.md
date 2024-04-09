@@ -8,6 +8,8 @@ Ensure you have the latest version of [Python](https://www.python.org/) supporte
 
 Ensure OBS is pointing to your Python 3.11.x directory (In OBS Studio go to Tools -> Scripts -> Python Settings, and ensure the path is pointed to your Python311 installation directory)
 
+![image](https://github.com/InsomniacToaster/OriDE-Rando-OBS-Seed-Display/assets/89503619/86156c81-2b14-475b-87ce-2147aaf758c8)
+
 Download the latest `ori_rando_seed_name.py` file from [releases](https://github.com/InsomniacToaster/OriDE-Rando-OBS-Seed-Display/releases)
 
 In OBS Studio, go to Tools -> Scripts -> + and find the file you downloaded.
@@ -18,6 +20,9 @@ In the script properties:
 * Set the text source you want to be populated.
 * Set the path to the directory where your randomizer.dat file is located (usually the Ori DE folder in steamapps\common).
 * Customize the seed parameters to your liking.
+
+![image](https://github.com/InsomniacToaster/OriDE-Rando-OBS-Seed-Display/assets/89503619/37e8f777-7db4-4ca3-b652-e6a2f4396fbd)
+
 
 In OBS properties:
 
