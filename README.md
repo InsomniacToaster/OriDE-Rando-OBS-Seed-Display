@@ -1,5 +1,5 @@
 # Overview
-This addon is forked from [JHobz's](https://github.com/jhobz/) original Lua script, and has been updated for compatibility with the current Ori DE Randomizer DLL. The intent of this script is to allow you to display the Ori DE Randomizer seed name and/or parameters in OBS without having to manually update the text each time. 
+This addon is forked from [JHobz's](https://github.com/jhobz/ori-obs-scripts) original Lua script, and has been updated for compatibility with the current Ori DE Randomizer DLL. The intent of this script is to allow you to display the Ori DE Randomizer seed name and/or parameters in OBS without having to manually update the text each time. 
 
 This has been tested to work on Windows, and may not be compatible with other Operating Systems.
 
@@ -8,7 +8,7 @@ Ensure you have the latest version of [Python](https://www.python.org/) supporte
 
 Ensure OBS is pointing to your Python 3.11.x directory (In OBS Studio go to Tools -> Scripts -> Python Settings, and ensure the path is pointed to your Python311 installation directory)
 
-Download the latest `ori_rando_seed_name.py` file from [releases](https://github.com/InsomniacToaster/ori-obs-scripts/releases)
+Download the latest `ori_rando_seed_name.py` file from [releases](https://github.com/InsomniacToaster/OriDE-Rando-OBS-Seed-Display/releases)
 
 In OBS Studio, go to Tools -> Scripts -> + and find the file you downloaded.
 
@@ -24,3 +24,6 @@ In OBS properties:
 * Go to Hotkeys and add a hotkey for "Ori Rando Seed Headers" (recommended: Alt+L as this will coincide with the default "Load Seed" command in the Ori randomizer).
 
 Now anytime you press the registered hotkey, your text source will populate with whichever parameters you have selected.
+
+# Credits
+Special thanks again to [JHobz](https://github.com/jhobz) for the original work and giving me the "ok" to fork/update it.
