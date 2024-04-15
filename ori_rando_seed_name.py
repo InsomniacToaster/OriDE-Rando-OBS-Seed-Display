@@ -87,15 +87,15 @@ def script_load(settings):
 
     # set hotkey
     global hotkey_id
-    hotkey_id = OBS.obs_hotkey_register_frontend(script_path(), 'Ori Rando Seed Headers', ori_seed_headers_hotkey)
-    hotkey_save_array = OBS.obs_data_get_array(settings, "oriseedheaders_hotkey")
+    hotkey_id = OBS.obs_hotkey_register_frontend(script_path(), 'Ori Rando Seed Display', ori_seed_display_hotkey)
+    hotkey_save_array = OBS.obs_data_get_array(settings, "oriseeddisplay_hotkey")
     OBS.obs_hotkey_load(hotkey_id, hotkey_save_array)
     OBS.obs_data_array_release(hotkey_save_array)
 
 def script_save(settings):
     # Hotkey save
     hotkey_save_array = OBS.obs_hotkey_save(hotkey_id)
-    OBS.obs_data_set_array(settings, "oriseedheaders_hotkey", hotkey_save_array)
+    OBS.obs_data_set_array(settings, "oriseeddisplay_hotkey", hotkey_save_array)
     OBS.obs_data_array_release(hotkey_save_array)
 
 # Fills the given list property object with the names of all sources plus an empty one
@@ -197,6 +197,6 @@ def update_source_text():
     OBS.obs_source_release(src)
 
 #Callback for the hotkey
-def ori_seed_headers_hotkey(pressed):
+def ori_seed_display_hotkey(pressed):
     if pressed:
         populate_headers(randomizer_path, seed_file_name)
